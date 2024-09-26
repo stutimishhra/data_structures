@@ -28,22 +28,21 @@ void pop(){
 
 void display(){
     if(top == -1)
-        printf("stack is empty");
+        printf("stack is empty.");
     else{
-        printf("Stack elemets are:");
+        printf("Stack elemets are: ");
         for(i=top; i>=0; i--)
-            printf("%d", stack[i]);
-        printf("Enter your next choice");
+            printf("%d \n", stack[i]);
     }
 }
 
 int main() {
     
-    printf("enter the size of stack: ");
+    printf("Enter the size of stack: ");
     scanf("%d", &n);
     while(1)
     {
-    printf("enter the choice of operation to be performed on stack:\n");
+    printf("\nMenu: 1- Insertion 2- Deletion 3- Display 4- Exit\nYour Choice: ");
         scanf("%d", &ch);
         switch(ch)
         {
@@ -63,6 +62,10 @@ int main() {
             {
                 display();
                 break;
+            }
+            
+            case 4:{
+                exit(0);
             }
 
             default:
